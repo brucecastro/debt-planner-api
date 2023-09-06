@@ -1,54 +1,54 @@
-import { Debt } from "../model/Debt";
+import { type Debt } from '../model/Debt'
+import { monthDiff } from './dates'
 
-const START_DATE = new Date();
+const START_DATE = new Date()
 
-const nperRevolving = (rate: number, payment_amt: number, present_val: number) => {
-  // console.log(`is revolving. rate: ${rate}, present_val: ${present_val}, payment: ${payment_amt}`);
-  let balance = present_val;
-  let periods = 0;
+const nperRevolving = (rate: number, paymentAmount: number, presentValue: number): number => {
+  // console.log(`is revolving. rate: ${rate}, presentValue: ${presentValue}, payment: ${paymentAmount}`);
+  let balance = presentValue
+  let periods = 0
 
   for (; balance > 0; periods++) {
-    balance = balance - (payment_amt - balance * (rate / 1200));
+    balance = balance - (paymentAmount - balance * (rate / 1200))
 
     // console.log('period: ' + periods + ', balance: ' + balance)
   }
 
   // return decimal to perform more accurate comparisons
-  const remainder = Math.abs(payment_amt / (balance * 100));
+  const remainder = Math.abs(paymentAmount / (balance * 100))
 
-  return periods + remainder;
-};
+  return periods + remainder
+}
 
-const nper = (rate: number, payment_amt: number, present_val: number, revolving = false) => {
-  if (rate == 0) return present_val / payment_amt;
+const nper = (rate: number, paymentAmount: number, presentValue: number, revolving = false): number => {
+  if (rate === 0) return presentValue / paymentAmount
 
-  if (revolving) return nperRevolving(rate, payment_amt, present_val);
+  if (revolving) return nperRevolving(rate, paymentAmount, presentValue)
 
-  rate = rate / 1200;
+  rate = rate / 1200
 
   return (
-    Math.log(payment_amt / rate / (payment_amt / rate + present_val)) /
+    Math.log(paymentAmount / rate / (paymentAmount / rate + presentValue)) /
     Math.log(1 - rate)
-  );
-};
+  )
+}
 
-const recalculateNpers = (debts:Array<Debt>, runningDate:Date, accelAmt:number) => {
-  const { monthDiff } = require('./dates');
-  const paidPeriods = monthDiff(START_DATE, runningDate);
+const recalculateNpers = (debts: Debt[], runningDate: Date, accelAmt: number): Debt[] => {
+  const paidPeriods = monthDiff(START_DATE, runningDate)
 
   return debts.map((d) => {
     // TODO: Is the following correct?
-    let balance = d.balance - paidPeriods * (d.min_payment + d.extra_payment);
+    const balance = d.balance - paidPeriods * (d.min_payment + d.extra_payment)
     d.projectedNPer = nper(
       d.interest_rate,
       d.min_payment + d.extra_payment + accelAmt,
       balance,
-      d.type == 'revolving'
-    );
+      d.type === 'revolving'
+    )
 
-    return d;
-  });
-};
+    return d
+  })
+}
 
 export {
   nper,
