@@ -1,0 +1,114 @@
+[
+  {
+    "name": "Ocwen",
+    "balance": 130393,
+    "min_payment": 650,
+    "extra_payment": 0,
+    "interest_rate": 4.25,
+    "type": "fixed"
+  },
+  {
+    "name": "Home Depot",
+    "balance": 178,
+    "min_payment": 56,
+    "extra_payment": 0,
+    "interest_rate": 26.9,
+    "type": "revolving"
+  },
+  {
+    "name": "Care Credit",
+    "balance": 839,
+    "min_payment": 28,
+    "extra_payment": 0,
+    "interest_rate": 26.9,
+    "type": "revolving"
+  },
+  {
+    "name": "Cams Braces",
+    "balance": 890,
+    "min_payment": 91,
+    "extra_payment": 0,
+    "interest_rate": 0,
+    "type": "fixed"
+  },
+  {
+    "name": "Lowes",
+    "balance": 2080,
+    "min_payment": 76,
+    "extra_payment": 0,
+    "interest_rate": 0,
+    "type": "revolving"
+  },
+  {
+    "name": "ISPC",
+    "balance": 5417,
+    "min_payment": 56,
+    "extra_payment": 0,
+    "interest_rate": 0,
+    "type": "fixed"
+  },
+  {
+    "name": "Car - Tiguan",
+    "balance": 12004,
+    "min_payment": 280,
+    "extra_payment": 0,
+    "interest_rate": 3,
+    "type": "fixed"
+  },
+  {
+    "name": "Car - Passat",
+    "balance": 17372,
+    "min_payment": 332,
+    "extra_payment": 0,
+    "interest_rate": 3,
+    "type": "fixed"
+  },
+  {
+    "name": "CC Platinum",
+    "balance": 4897,
+    "min_payment": 71,
+    "extra_payment": 0,
+    "interest_rate": 13.5,
+    "type": "revolving"
+  },
+  {
+    "name": "JC Penny",
+    "balance": 239,
+    "min_payment": 40,
+    "extra_payment": 0,
+    "interest_rate": 26.99,
+    "type": "revolving"
+  },
+  {
+    "name": "Kohls",
+    "balance": 528,
+    "min_payment": 109,
+    "extra_payment": 0,
+    "interest_rate": 23.99,
+    "type": "revolving"
+  },
+  {
+    "name": "VA",
+    "balance": 1722,
+    "min_payment": 24,
+    "extra_payment": 0,
+    "interest_rate": 0,
+    "type": "fixed"
+  },
+  {
+    "name": "Student Loan",
+    "balance": 11654,
+    "min_payment": 113,
+    "extra_payment": 0,
+    "interest_rate": 3.8,
+    "type": "fixed"
+  },
+  {
+    "name": "Cold Water Creek",
+    "balance": 2000,
+    "min_payment": 78,
+    "extra_payment": 0,
+    "interest_rate": 18.24,
+    "type": "revolving"
+  }
+]

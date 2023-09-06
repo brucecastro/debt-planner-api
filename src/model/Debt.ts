@@ -189,6 +189,5 @@ const typeMap: any = {
         { json: "extra_payment", js: "extra_payment", typ: 3.14 },
         { json: "interest_rate", js: "interest_rate", typ: 3.14 },
         { json: "type", js: "type", typ: "" },
-        { json: "projectedNPer", js: "projectedNPer", typ: 3.14 },
     ], false),
 };

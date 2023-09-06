@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Home Depot",
+    "type": "revolving",
+    "accel_payment": 0
+  },
+  {
+    "name": "Kohls",
+    "type": "revolving",
+    "accel_payment": 56
+  },
+  {
+    "name": "JC Penny",
+    "type": "revolving",
+    "accel_payment": 165
+  },
+  {
+    "name": "Cams Braces",
+    "type": "fixed",
+    "accel_payment": 205
+  },
+  {
+    "name": "Care Credit",
+    "type": "revolving",
+    "accel_payment": 296
+  },
+  {
+    "name": "Lowes",
+    "type": "revolving",
+    "accel_payment": 324
+  },
+  {
+    "name": "Cold Water Creek",
+    "type": "revolving",
+    "accel_payment": 400
+  },
+  {
+    "name": "VA",
+    "type": "fixed",
+    "accel_payment": 478
+  },
+  {
+    "name": "ISPC",
+    "type": "fixed",
+    "accel_payment": 502
+  },
+  {
+    "name": "Car - Tiguan",
+    "type": "fixed",
+    "accel_payment": 558
+  },
+  {
+    "name": "CC Platinum",
+    "type": "revolving",
+    "accel_payment": 838
+  },
+  {
+    "name": "Car - Passat",
+    "type": "fixed",
+    "accel_payment": 909
+  },
+  {
+    "name": "Student Loan",
+    "type": "fixed",
+    "accel_payment": 1241
+  },
+  {
+    "name": "Ocwen",
+    "type": "fixed",
+    "accel_payment": 1354
+  }
+]

@@ -7,8 +7,8 @@ import { getPayOffDate } from './utils/dates';
 
 
 export const handler = async (event: APIGatewayEvent, context: Context): Promise<APIGatewayProxyResult> => {
-  console.log(`Event: ${JSON.stringify(event, null, 2)}`);
-  console.log(`Context: ${JSON.stringify(context, null, 2)}`);
+  // console.log(`Event: ${JSON.stringify(event, null, 2)}`);
+  // console.log(`Context: ${JSON.stringify(context, null, 2)}`);
 
   const { body, httpMethod, path } = event;
 
@@ -25,7 +25,7 @@ export const handler = async (event: APIGatewayEvent, context: Context): Promise
   let debts: Array<Debt>;
 
   try {
-    debts = Convert.toDebt(JSON.parse(body));
+    debts = Convert.toDebt(body);
   } catch {
     throw new Error(`Invalid JSON`);
   }
@@ -38,7 +38,7 @@ export const handler = async (event: APIGatewayEvent, context: Context): Promise
   let availableDebts = debts;
   let runningDate = new Date();
 
-  for (let i = 0; i < availableDebts.length; i++) {
+  for (let i = 0; i < debts.length; i++) {
     // console.log('in debt ' + debts[i].name);
     availableDebts = recalculateNpers(availableDebts, runningDate, accelAmount);
     availableDebts.sort((x: Debt, y: Debt) => x.projectedNPer - y.projectedNPer);
