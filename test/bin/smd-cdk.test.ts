@@ -1,17 +1,19 @@
-// import * as cdk from 'aws-cdk-lib';
-// import { Template } from 'aws-cdk-lib/assertions';
-// import * as SmdCdk from '../lib/smd-cdk-stack';
+import * as cdk from 'aws-cdk-lib'
+import { Template } from 'aws-cdk-lib/assertions'
+import * as SmdApiCdk from '../../lib/smd-api-cdk-stack'
 
-// example test. To run these tests, uncomment this file along with the
-// example resource in lib/smd-cdk-stack.ts
-test('SQS Queue Created', () => {
-//   const app = new cdk.App();
-//     // WHEN
-//   const stack = new SmdCdk.SmdCdkStack(app, 'MyTestStack');
-//     // THEN
-//   const template = Template.fromStack(stack);
+describe('Test SMD CDK Constructs', () => {
+  const app = new cdk.App()
+  const stack = new SmdApiCdk.SmdApiCdkStack(app, 'MyTestStack')
+  const template = Template.fromStack(stack)
 
-//   template.hasResourceProperties('AWS::SQS::Queue', {
-//     VisibilityTimeout: 300
-//   });
+  it('should create the SMD API Gateway', () => {
+    template.hasResource('AWS::ApiGateway::RestApi', {})
+  })
+
+  it('should create the Lambda Function', () => {
+    template.hasResourceProperties('AWS::Lambda::Function', {
+      Handler: 'index.handler'
+    })
+  })
 })

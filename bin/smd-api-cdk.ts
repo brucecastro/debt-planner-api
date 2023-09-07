@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 import 'source-map-support/register'
 import * as cdk from 'aws-cdk-lib'
-import { SmdCdkStack } from '../lib/smd-cdk-stack'
+import { SmdApiCdkStack } from '../lib/smd-api-cdk-stack'
 
 const app = new cdk.App()
 // eslint-disable-next-line no-new
-new SmdCdkStack(app, 'SmdCdkStack', {
+new SmdApiCdkStack(app, 'SmdApiCdkStack', {
   /* If you don't specify 'env', this stack will be environment-agnostic.
    * Account/Region-dependent features and context lookups will not work,
    * but a single synthesized template can be deployed anywhere. */

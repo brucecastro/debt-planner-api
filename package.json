@@ -1,8 +1,8 @@
 {
-  "name": "smd-cdk",
+  "name": "smd-api-cdk",
   "version": "0.1.0",
   "bin": {
-    "smd-cdk": "bin/smd-cdk.js"
+    "smd-api-cdk": "bin/smd-api-cdk.js"
   },
   "scripts": {
     "build": "tsc",

@@ -7,6 +7,17 @@ node_modules
 .cdk.staging
 cdk.out
 
+# dotenv environment variables file
+.env
 
-# IDE
+# os / ide / dev files
+*~
+.DS_Store
+Thumbs.db
+Desktop.ini
+.sync
+.sync-bak
 .vscode
+temp/
+*.bak
+*.swp
