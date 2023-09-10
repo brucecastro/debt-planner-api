@@ -3,7 +3,7 @@ import { handler } from '../src/calculate'
 import * as debtsJson from './mock/debts.json'
 import * as debtsStackedJson from './mock/debts-stacked.json'
 
-describe('Test SMD API logic', () => {
+describe('Test API calculate logic', () => {
   const event: Partial<APIGatewayProxyEvent> = {
     httpMethod: 'POST',
     body: JSON.stringify(debtsJson)
